@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'Nanum';
+    src: url('../fonts/NanumSquareOTFRegular.woff') format('woff');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Nanum';
+    src: url('../fonts/NanumSquareOTFBold.woff') format('woff');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'TTHoves';
+    src: url('../fonts//TTHoves-Medium.woff') format('woff');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'TTHoves';
+    src: url('../fonts//TTHoves-DemiBold.woff') format('woff');
+    font-weight: 600;
+}
+
+body {
+    color: #000;
+    font-family: 'TTHoves', 'Nanum', sans-serif;
+    font-size: 14px;
+}
+
+.blind {
+    overflow: hidden;
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    clip: rect(0 0 0 0);
+}
+
+.common-inner {
+    margin: 0 auto;
+    padding: 0 104px;
+    max-width: 1200px;
+
+}
+
+/* 스프라이트 이미지 */
+.header .logo .link-logo,
+.notice-area .btn-close,
+.control-box a,
+.sc-teams .link-team .num::after,
+.sc-apply .link-apply::after,
+.sc-search .search-pop-mb .btn-search-mb2,
+.sc-search .search-box .arrow-mb::before,
+.sc-search .keyword-wrap::before {
+    background-size: 328px 205px;
+    background-image: url(../images/sp_pc.png);
+    background-repeat: no-repeat;
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    /* 1024을 기준으로 화면을 보고 잡아야함 */
+    .header .logo .link-logo,
+    .header .menu-area .btn-menu,
+    .header .arrow::after,
+    .header .menu-area .btn-menu.close,
+    .sc-search .btn-search-mb::after,
+    .sc-search .search-pop-mb .close::after {
+        background-image: url(https://recruit.navercorp.com/share/tmplat/naver/img/sp_mo.png);
+        background-size: 195px 181px;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+
+    /* 768을 기준으로 화면을 보고 잡아야함 */
+    .sc-teams .link-team .num::after {
+        background-image: url(https://recruit.navercorp.com/share/tmplat/naver/img/sp_mo.png);
+        background-size: 195px 181px;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /* 320을 기준으로 화면을 보고 잡아야함 */
+}

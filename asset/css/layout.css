@@ -1,0 +1,404 @@
+@import './reset.css';
+@import './common.css';
+
+.header {
+    position: fixed;
+    top: 0;
+    background: #fff;
+    z-index: 5;
+    width: 100%;
+
+}
+
+.header.active::before {
+    content: '';
+    width: 100%;
+    height: 182px;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    background: #fff;
+}
+
+.header .common-inner {
+    height: 64px;
+    max-width: 1920px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .gnb-area {
+    margin-right: auto;
+}
+
+.header .logo {
+    display: block;
+    display: flex;
+    align-items: center;
+}
+
+.header .logo .link-logo {
+    height: 100%;
+    display: block;
+    width: 223px;
+    height: 35px;
+    background-position: -105px 0px;
+}
+
+.header .title {
+    display: block;
+    font-size: 17px;
+    letter-spacing: -0.36px;
+    position: relative;
+}
+
+.header .title:hover::after {
+    content: '';
+    height: 1px;
+    background: #000;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+
+}
+
+.header .sub-list {
+    display: none;
+    /* background: rgba(225, 225, 225, 0.9); */
+    position: absolute;
+    top: 64px;
+    /* height: 182px; */
+    /* width: 100%; */
+}
+
+.header .sub-list.active {
+    display: block;
+}
+
+
+.header .sub-item {
+    margin-right: 15px;
+    padding: 3px 0;
+
+}
+
+.header .link-sub {
+    line-height: 32px;
+    position: relative;
+}
+
+
+.header .gnb-list {
+    display: flex;
+    margin-left: 29px;
+
+}
+
+.header .gnb-item {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.header .util-area {
+    display: flex;
+    box-sizing: border-box;
+    height: 64px;
+    align-items: center;
+}
+
+.header .link-util.title {
+    margin: 0 10px;
+}
+
+.header .menu-area {
+    display: none;
+}
+
+.header .menu-wrap-mb {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    padding: 25px 0 25px 0;
+    background-color: #f2f2f2;
+}
+
+.footer .common-inner {
+    display: flex;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    max-width: 1920px;
+
+}
+
+.footer .footer-wrap {
+    display: flex;
+}
+
+.footer h2 {
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: -0.32px;
+    color: #000;
+}
+
+.footer .copy {
+    display: block;
+    height: 100%;
+}
+
+.footer .personal {
+    margin-left: 30px;
+    margin-right: auto;
+    display: block;
+    font-size: 14px;
+    /* line-height수정 */
+    line-height: 32px;
+    letter-spacing: -0.28px;
+    color: #909090;
+}
+
+.footer .link-relate::before {
+    content: '';
+    position: absolute;
+    top: 18px;
+    right: 0;
+    background-position: -122px -93px;
+    width: 10px;
+    height: 6px;
+    z-index: 100;
+}
+
+.footer .relate-site {
+    position: relative;
+    width: 280px;
+    height: 42px;
+    line-height: 42px;
+    text-align: left;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #000;
+    display: block;
+}
+
+.footer .relate-site.active {
+    background-color: #fff;
+}
+
+.footer .link-relate {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.footer .relate-area {
+    position: relative;
+}
+
+.footer .relate-list {
+    opacity: 0;
+    display: none;
+}
+
+.footer .relate-list.active {
+    opacity: 1;
+    display: block;
+    position: absolute;
+    bottom: 42px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 10;
+}
+
+.footer .relate-item {
+    padding: 0 12px;
+    font-size: 18px;
+    line-height: 42px;
+}
+
+.footer .link-site {
+    display: block;
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    /* 1024을 기준으로 화면을 보고 잡아야함 */
+    .header .common-inner {
+        height: 60px;
+        padding: 0 22px;
+    }
+
+    .header .gnb-area {
+        display: none;
+    }
+
+    .header .util-area {
+        display: none;
+    }
+
+    .header .logo .link-logo {
+        width: 160px;
+        height: 23px;
+        background-position: 0px 0px;
+    }
+
+    .header .menu-area {
+        display: flex;
+        align-items: center;
+    }
+
+    .header .menu-area .btn-menu {
+        width: 20px;
+        height: 14px;
+        background-position: -85px -28px;
+    }
+
+    .header .menu-area .btn-menu.close {
+        width: 20px;
+        height: 14px;
+        background-position: -85px -49px;
+    }
+
+    .header .menu-wrap-mb {
+        position: fixed;
+        background: #fff;
+        top: 60px;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        transition: 0.5s;
+        display: block;
+    }
+
+    .header .menu-wrap-mb.active {
+        right: 0;
+
+    }
+
+    .header .menu-list-mb {
+        padding: 11px 0 9px;
+
+    }
+
+    .header .menu-item-mb {}
+
+    .header .arrow::after {
+        background-position: -136px -49px;
+        display: inline-block;
+        width: 10px;
+        height: 6px;
+        content: '';
+        margin: 0 0 5px 10px;
+    }
+
+    .header .title-mb {
+        display: block;
+        padding: 0 22px;
+        font-size: 22px;
+        line-height: 46px;
+        letter-spacing: -0.44px;
+    }
+
+    .header .sub-list-mb {
+        padding: 3px 22px 15px;
+        display: none;
+    }
+
+    .header .sub-list-mb.active {
+        display: block;
+    }
+
+    .header .sub-item-mb {
+        margin-top: 13px;
+    }
+
+    .header .link-sub-mb {
+        padding-left: 20px;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.36px;
+        background-color: #fff;
+        font-weight: normal;
+    }
+
+    .header .util-area-mb {
+        position: relative;
+        padding: 11px 0 9px;
+    }
+
+    .header .util-area-mb::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 22px;
+        right: 22px;
+        height: 1px;
+        background-color: #d0d0d0;
+
+    }
+}
+
+
+
+@media screen and (max-width: 1023px) {
+
+    /* 768을 기준으로 화면을 보고 잡아야함 */
+    .footer .common-inner {
+        flex-wrap: wrap;
+
+    }
+
+    .footer .copy {
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: -0.3px;
+    }
+
+    .footer .personal {
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: -0.28px;
+        color: #909090;
+
+    }
+
+    .footer .relate-area {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .footer .relate-site {
+        width: 100%;
+    }
+
+    .footer .footer-wrap {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    /* 320을 기준으로 화면을 보고 잡아야함 */
+    .footer .footer-wrap {
+        display: flex;
+    }
+}
