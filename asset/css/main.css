@@ -17,7 +17,6 @@
 }
 
 .notice-area .group-txt {
-    /* background: #f00; */
     overflow: hidden;
     margin-right: 30px;
 
@@ -29,10 +28,6 @@
     vertical-align: middle;
 }
 
-.notice-area .notice-box {
-    direction: left;
-    display: block;
-}
 
 .notice-area .link-notice {
     width: 100%;
@@ -86,7 +81,6 @@
 
 
 /* 슬라이드 */
-.sc-slide {}
 
 .sc-slide .main-slide {
     height: 544px;
@@ -151,13 +145,7 @@
     display: flex;
 }
 
-.sc-search .icon {
-    
-}
 
-.sc-search .icon::after {
-    
-}
 .sc-search .keyword-wrap::before{
     content: '';
     display: block;
@@ -309,7 +297,6 @@
     padding-bottom: 89px;
 }
 
-.sc-teams .title-wrap {}
 
 .sc-teams .teams-list {
     margin-top: 70px;
@@ -385,10 +372,6 @@
     position: relative;
     padding-bottom: 70px;
     overflow: hidden;
-}
-
-.sc-people .swiper {
-    /* overflow: initial; */
 }
 
 
@@ -480,12 +463,6 @@
 
 
 /* 슬라이드2------------------------------- */
-.sc-benefit .swiper.benefit-slide {
-    /* height: 525px; */
-    /* padding-left: 104px; */
-}
-
-
 
 .sc-benefit .link-slide {
     padding-bottom: 70px;
@@ -1013,7 +990,6 @@
         vertical-align: middle;
     }
 
-    .sc-apply .link-apply::after {}
 
 
 }
