@@ -17,14 +17,7 @@ $(function () {
         }
     })
 
-    $('label').click(function (e) {
-        e.preventDefault();
-        if ($('.cb1::after').hasClass('active')) {
-            $('.cb1::after').removeClass('active')
-        } else {
-            $('.cb1::after').addClass('active')
-        }
-    })
+   
     /**
      * 마우스 올리면 서브메뉴 나타나기
      *
